@@ -24,5 +24,18 @@ namespace PlayList_Maker
         {
             InitializeComponent();
         }
+
+        private void Update_Driver()
+        {
+            try
+            {
+                var Update = new ChromeDriverUpdater.ChromeDriverUpdater();
+                Update.Update(@"chromedriver.exe");
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
     }
 }
